@@ -1,0 +1,19 @@
+---
+apiVersion: enterprise.splunk.com/v1alpha2
+kind: IndexerCluster
+metadata:
+  name: splunkhuntkit
+  finalizers:
+  - enterprise.splunk.com/delete-pvc
+spec:
+  replicas: 5
+---
+apiVersion: enterprise.splunk.com/v1alpha2
+kind: SearchHeadCluster
+metadata:
+  name: example
+  finalizers:
+  - enterprise.splunk.com/delete-pvc
+spec:
+  indexerClusterRef:
+    name: splunkhuntkit
