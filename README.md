@@ -9,8 +9,8 @@ kubectl get pods
 NAME                               READY   STATUS    RESTARTS   AGE
 splunk-operator-75f5d4d85b-8pshn   1/1     Running   0          5s
 
-============================
 To remove all Splunk deployments and completely uninstall the Splunk Operator, run:
+============================
 
 kubectl delete standalones --all
 kubectl delete licensemasters --all
@@ -26,9 +26,8 @@ Install Search Head Cluster and Indexer Cluster
 kubectl apply -f splunk-cluster-deployment.yaml
 
 
-===========================
 To Remove All deployments
-
+============================
 kubectl delete SearchHeadCluster splunkhuntkit
 kubectl delete IndexerCluster splunkhuntkit
 
