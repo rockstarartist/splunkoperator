@@ -2,7 +2,7 @@
 apiVersion: enterprise.splunk.com/v1alpha2
 kind: IndexerCluster
 metadata:
-  name: splunkhuntkit
+  name: splunkkit
   finalizers:
   - enterprise.splunk.com/delete-pvc
 spec:
@@ -16,4 +16,4 @@ metadata:
   - enterprise.splunk.com/delete-pvc
 spec:
   indexerClusterRef:
-    name: splunkhuntkit
+    name: splunkkit

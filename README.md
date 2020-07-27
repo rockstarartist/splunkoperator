@@ -1,6 +1,6 @@
 Install Operator
 ============================
-kubectl config set-context --current --namespace=<NAMESPACE>
+kubectl config set-context --current --namespace=splunk
 kubectl apply -f splunk-operator.yaml
 
 After starting the operator, you should see a single pod running within your namespace:
@@ -28,8 +28,8 @@ kubectl apply -f splunk-cluster-deployment.yaml
 
 To Remove All deployments
 ============================
-kubectl delete SearchHeadCluster splunkhuntkit
-kubectl delete IndexerCluster splunkhuntkit
+kubectl delete SearchHeadCluster splunkkit
+kubectl delete IndexerCluster splunkkit
 
 
 The enterprise.splunk.com/delete-pvc finalizer is optional, and may be used to tell the Splunk Operator that you would like it to remove all the Persistent Volumes associated with the instance when you delete it.
